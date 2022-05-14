@@ -45,7 +45,9 @@ defmodule Center.MixProject do
       {:telemetry_poller, "~> 1.0"},
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"},
-      {:absinthe, "~> 1.6.4"}
+      {:absinthe, "~> 1.6.4"},
+      {:absinthe_relay, "~> 1.5.1"},
+      {:absinthe_plug, "~> 1.5.8"}
     ]
   end
 

@@ -14,14 +14,5 @@ defmodule CenterWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", CenterWeb do
-    pipe_through :browser
-
-    get "/", PageController, :index
-  end
-
-  # Other scopes may use custom stacks.
-  # scope "/api", CenterWeb do
-  #   pipe_through :api
-  # end
+  forward "/api", Absinthe.Plug, schema: CenterWeb.Schema
 end

@@ -22,4 +22,8 @@ defmodule Center.Schemas.Family do
     |> changeset(data)
     |> Repo.insert()
   end
+
+  def find(id: id) do
+    Repo.get(Family, id)
+  end
 end
