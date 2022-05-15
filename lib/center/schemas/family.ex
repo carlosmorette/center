@@ -26,4 +26,8 @@ defmodule Center.Schemas.Family do
   def find(id: id) do
     Repo.get(Family, id)
   end
+
+  def find_all() do
+    Repo.all(Family)
+  end
 end

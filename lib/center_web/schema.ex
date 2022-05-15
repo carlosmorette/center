@@ -17,6 +17,10 @@ defmodule CenterWeb.Schema do
     node field do
       resolve(&CenterWeb.Resolvers.Node.find/2)
     end
+
+    field :all_families, list_of(:family) do
+      resolve(&CenterWeb.Resolvers.Family.find_all/2)
+    end
   end
 
   mutation do

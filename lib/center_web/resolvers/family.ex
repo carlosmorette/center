@@ -36,4 +36,10 @@ defmodule CenterWeb.Resolvers.Family do
         {:error, inspect(error)}
     end
   end
+
+  def find_all(_params, _resolution) do
+    {:ok,
+     Center.Schemas.Family.find_all()
+     |> Enum.map(fn r -> format(r, true) end)}
+  end
 end
