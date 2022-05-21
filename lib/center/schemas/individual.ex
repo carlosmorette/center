@@ -3,7 +3,7 @@ defmodule Center.Schemas.Individual do
   import Ecto.Changeset
 
   alias Center.Repo
-  alias Center.Schemas.{Individual, Family}
+  alias Center.Schemas.{Family, Individual}
 
   @positions [
     :father,

@@ -47,7 +47,8 @@ defmodule Center.MixProject do
       {:plug_cowboy, "~> 2.5"},
       {:absinthe, "~> 1.6.4"},
       {:absinthe_relay, "~> 1.5.1"},
-      {:absinthe_plug, "~> 1.5.8"}
+      {:absinthe_plug, "~> 1.5.8"},
+      {:credo, "~> 1.6", only: [:dev, :test], runtime: false}
     ]
   end
 

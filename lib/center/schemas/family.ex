@@ -13,8 +13,7 @@ defmodule Center.Schemas.Family do
   end
 
   def changeset(family, attrs) do
-    family
-    |> cast(attrs, [:name])
+    cast(family, attrs, [:name])
   end
 
   def create(data) do

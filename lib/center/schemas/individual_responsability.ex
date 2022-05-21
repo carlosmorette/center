@@ -45,10 +45,10 @@ defmodule Center.Schemas.IndividualResponsability do
         {:error, "individual not found"}
 
       individual ->
-        if not is_nil(individual.family_id) do
-          {:ok, individual}
-        else
+        if is_nil(individual.family_id) do
           {:error, "individual needs to have a family"}
+        else
+          {:ok, individual}
         end
     end
   end
